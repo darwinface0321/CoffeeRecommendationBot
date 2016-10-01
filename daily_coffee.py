@@ -50,7 +50,9 @@ api = TwitterAPI(
     keys.access_token_secret
 )
 bot = api.request('account/verify_credentials').json()["screen_name"]
+
 logging.info("Connected")
+print(u"Coffee of the day :\n"+order())
 
 try:
     logging.info("Sending COTD")
