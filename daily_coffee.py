@@ -9,6 +9,7 @@ import logging
 import json
 from TwitterAPI import TwitterAPI, TwitterRequestError
 
+
 coffee_file = open("coffeeType.json")
 coffee_types = json.load(coffee_file)
 intro = coffee_types['intro']

@@ -9,6 +9,10 @@
     "Nothing like a",
     "My personal favorite"
   ],
+  "temp": [
+    "Hot",
+    "Iced"
+  ],
   "multi": [
     "",
     "Single",
@@ -21,9 +25,7 @@
     "Short",
     "Tall",
     "Grande",
-    "Venti® Hot",
-    "Venti® Cold",
-    "Trenta® Cold"
+    "Venti®"
   ],
   "coffee": [
     "Espresso",
@@ -32,14 +34,13 @@
     "Caffe Americano",
     "Cappuccino",
     "Caffe Latte",
-    "Vanilla Latte",
     "Caramel Macchiato",
-    "Chocolate Mocha",
+    "Caffe Mocha",
     "White Caffe Mocha",
     "Frappuccino",
     "Ristretto",
     "Chai Tea Latte",
-    "Mocha"
+    "Affogato"
   ],
   "attribute": [
     "",
@@ -49,11 +50,9 @@
     "Venti",
     "Soy",
     "No Foam",
-    "Tripple",
     "Half Sweet",
     "Decaf",
     "Half-Caff",
-    "Quad",
     "One-Pump",
     "Skinny",
     "Fat",
@@ -82,11 +81,12 @@
     "Cinnamon",
     "Vanilla",
     "Chocolate",
+    "Peppermint",
     "Pumpkin Spice"
   ],
   "appendition": [
     "",
-    "And Extra Shot",
+    "And An Extra Shot",
     "Plus Extra Whip",
     "With An Extra Shot And Cream",
     "At 120 Degrees",
