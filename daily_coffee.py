@@ -7,6 +7,7 @@ import logging
 import json
 from TwitterAPI import TwitterAPI, TwitterRequestError
 
+
 coffeeFile  = open("coffeeType.json")
 coffeeTypes = json.load(coffeeFile)
 intro       = coffeeTypes['intro']
@@ -18,6 +19,7 @@ attribute   = coffeeTypes['attribute']
 syrup_type  = coffeeTypes['syrup_type']
 syrup       = coffeeTypes['syrup']
 appendition = coffeeTypes['appendition']
+
 
 def order():
     # order coffee in this order: (source: http://www.delish.com/food/a42014/17-secrets-of-a-starbucks-barista/)
@@ -51,16 +53,16 @@ def make_tweet():
             return o
 
 logging.info("Connecting to Twitter API")
-#api = TwitterAPI(keys.consumer_key, keys.consumer_secret, keys.access_token_key, keys.access_token_secret)
-#bot = api.request('account/verify_credentials').json()["screen_name"]
+api = TwitterAPI(keys.consumer_key, keys.consumer_secret, keys.access_token_key, keys.access_token_secret)
+bot = api.request('account/verify_credentials').json()["screen_name"]
 logging.info("Connected")
-print(u"Coffee of the day :\n"+order())
+# print(u"Coffee of the day :\n"+order())
 
-# try:
-#     logging.info("Sending COTD")
-#     t = make_tweet()
-#     r = api.request('statuses/update', {'status' : t})
-#     logging.info("COTD with status : {}".format(r.status_code))
-#     logging.info("Done !")
-# except TwitterRequestError as e:
-#     logging.exception(e)
+try:
+    logging.info("Sending COTD")
+    t = make_tweet()
+    r = api.request('statuses/update', {'status' : t})
+    logging.info("COTD with status : {}".format(r.status_code))
+    logging.info("Done !")
+except TwitterRequestError as e:
+    logging.exception(e)
