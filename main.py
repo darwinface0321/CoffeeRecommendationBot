@@ -12,6 +12,7 @@ logging.basicConfig(filename="/tmp/coffebot.log", level=logging.INFO)
 coffeeFile  = open("coffeeType.json")
 coffeeTypes = json.load(coffeeFile)
 intro       = coffeeTypes['intro']
+temp        = coffeeTypes['temp']
 multi       = coffeeTypes['multi']
 size        = coffeeTypes['size']
 coffee      = coffeeTypes['coffee']
@@ -22,13 +23,14 @@ appendition = coffeeTypes['appendition']
 
 def order():
     order = OrderedDict()
-    order[random.choice(multi)] = True
+    order[random.choice(temp)] = True
+    order[random.choice(size)] = True
     for i in range(random.randint(0,5)):
         order[random.choice(attribute)] = True
-    order[random.choice(size)] = True
-    order[random.choice(coffee)] = True
+    order[random.choice(multi)] = True
     order[random.choice(syrup_type)] = True
     order[random.choice(syrup)] = True
+    order[random.choice(coffee)] = True
     for i in range(random.randint(0,2)):
         order[random.choice(appendition)] = True
     return " ".join(" ".join(order.keys()).split())
