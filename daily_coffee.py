@@ -35,7 +35,6 @@ def order():
         order_dict[random.choice(appendition)] = True
     return " ".join(" ".join(order_dict.keys()).split())
 
-
 def make_tweet():
     while True:
         o = u"Coffee of the day :\n" + order()
@@ -54,6 +53,7 @@ bot = api.request('account/verify_credentials').json()["screen_name"]
 
 logging.info("Connected")
 print(u"Coffee of the day :\n"+order())
+
 
 try:
     logging.info("Sending COTD")

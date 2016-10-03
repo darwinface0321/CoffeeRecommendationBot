@@ -13,6 +13,10 @@
     "Hot",
     "Iced"
   ],
+  "temp": [
+    "Hot",
+    "Iced"
+  ],
   "multi": [
     "",
     "Single",
